@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hapag KAIN-NA! Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #2e3d34;
+            font-family: 'Century Gothic', sans-serif;
+            margin: 0;
+        }
+
+        .container.my-5 {
+            background-color: #3a5747;
+            padding: 50px;
+            max-width: 1350px;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 400px;
+            width: 100%;
+        }
+
+        .navbar {
+            padding: 5px 0;
+            background-color: #1c2c24;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #f8f9fa;
+            text-transform: uppercase;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #f0a500;
+        }
+
+        .card img {
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .footer {
+            background-color: #1c2c24;
+            color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: 50vh; 
+            object-fit: cover;
+            display: block;
+            margin-top: 60px; 
+            border-bottom: 5px solid #f0a500;
+        }
+
+        h2 {
+            background-color: #4b6f5b;
+            padding: 10px;
+            border-radius: 5px;
+            color: #f8f9fa;
+        }
+
+        .card {
+            border: none;
+            background-color: #fff;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-body {
+            padding: 10px 20px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            color: #2a4d36;
+        }
+
+        .card-text {
+            color: #4e5b54;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background-color: #f0a500;
+            border-color: #f0a500;
+        }
+
+        .btn-primary:hover {
+            background-color: #d88d00;
+            border-color: #d88d00;
+        }
+
+        .row {
+            margin-bottom: 20px;
+        }
+
+        .col-md-12 {
+            padding: 15px;
+        }
+
+        .col-md-12 img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .dinner-col {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-width: 1200px) {
+            .container.my-5 {
+                max-width: 100%;
+                padding: 30px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="C:\Users\LEGION\Downloads\image-removebg-preview (3).png" alt="Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="submit.html">Submit Recipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <img src="file:///C:/Users/LEGION/Downloads/filipino%20(1).png" alt="Philippine Food" class="banner-img">
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4 text-white">Recipe Categories</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="file:///C:/Users/LEGION/Downloads/filipino%20(4).png" class="card-img-top" alt="Category 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Breakfast</h5>
+                        <p class="card-text">Delicious breakfast ideas to start your day right.</p>
+                        <a href="Breakfast.html" class="btn btn-primary">View Recipes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="file:///C:/Users/LEGION/Downloads/filipino%20(5).png" class="card-img-top" alt="Category 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Lunch</h5>
+                        <p class="card-text">Hearty lunch recipes to keep you energized.</p>
+                        <a href="Lunch.html" class="btn btn-primary">View Recipes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <img src="file:///C:/Users/LEGION/Downloads/filipino%20(6).png" class="card-img-top" alt="Category 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Dinner</h5>
+                        <p class="card-text">Delicious and easy dinner recipes for any night.</p>
+                        <a href="Dinner.html" class="btn btn-primary">View Recipes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 HAPAG KAIN-NA! Recipe Hub | All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
