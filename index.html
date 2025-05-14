@@ -1,370 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Online Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hapag KAIN-NA! Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #DFF2EB;
+            background-color: #2e3d34;
+            font-family: 'Century Gothic', sans-serif;
+            margin: 0;
         }
+
+        .container.my-5 {
+            background-color: #3a5747;
+            padding: 50px;
+            max-width: 1350px;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 400px;
+            width: 100%;
+        }
+
         .navbar {
-            background-color: #4A628A;
+            padding: 5px 0;
+            background-color: #1c2c24;
         }
-        .profile-img {
-            width: 150px;
+
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #f8f9fa;
+            text-transform: uppercase;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #f0a500;
+        }
+
+        .card img {
             height: 150px;
             object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
         }
-        .card-img-top {
-            width: 400px;
-            height: 150px; 
-        }
-        .section {
-            padding: 60px 0;
-            border-bottom: 1px solid #B9E5E8;
-        }
-        .project-card {
-            transition: transform 0.3s;
-            margin-bottom: 20px;
-            border-color: #7AB2D3;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        footer {
-            background-color: #4A628A;
-            color: white;
+
+        .footer {
+            background-color: #1c2c24;
+            color: #f8f9fa;
             padding: 20px 0;
+            text-align: center;
         }
-        .rating-star {
-            color: #7AB2D3;
-            font-size: 24px;
-            cursor: pointer;
+
+        .banner-img {
+            width: 100%;
+            height: 50vh; 
+            object-fit: cover;
+            display: block;
+            margin-top: 60px; 
+            border-bottom: 5px solid #f0a500;
         }
-        .portfolio-header {
-            background-color: #7AB2D3;
-            color: white;
+
+        h2 {
+            background-color: #4b6f5b;
+            padding: 10px;
+            border-radius: 5px;
+            color: #f8f9fa;
         }
+
         .card {
-            border-color: #7AB2D3;
+            border: none;
+            background-color: #fff;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
         }
+
+        .card-body {
+            padding: 10px 20px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            color: #2a4d36;
+        }
+
+        .card-text {
+            color: #4e5b54;
+            font-size: 0.9rem;
+        }
+
         .btn-primary {
-            background-color: #4A628A;
-            border-color: #4A628A;
+            background-color: #f0a500;
+            border-color: #f0a500;
         }
+
         .btn-primary:hover {
-            background-color: #7AB2D3;
-            border-color: #7AB2D3;
+            background-color: #d88d00;
+            border-color: #d88d00;
         }
-        .bg-light {
-            background-color: #B9E5E8 !important;
+
+        .row {
+            margin-bottom: 20px;
         }
-        .list-group-item {
-            background-color: #DFF2EB;
-            border-color: #B9E5E8;
+
+        .col-md-12 {
+            padding: 15px;
         }
+
+        .col-md-12 img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .dinner-col {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-width: 1200px) {
+            .container.my-5 {
+                max-width: 100%;
+                padding: 30px;
+            }
+        }
+
     </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar">
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">My Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://scontent-mnl1-1.xx.fbcdn.net/v/t39.30808-6/497540015_122228255576064306_6604737518877643721_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vRJGFDI09rMQ7kNvwGAm3xF&_nc_oc=AdltMzntZAeMzeWCBZtflKTXh47ySYyWFNBvwLJk2HDdv7FXcy2KKHHC5iDWiV2UX_k&_nc_zt=23&_nc_ht=scontent-mnl1-1.xx&_nc_gid=5rX8psSVguVdqqEM0rqScQ&oh=00_AfK57wYre5a8_RMSTlyTNIo-K91W6aG9e7fuFurzviOl9w&oe=6829A884" alt="Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#profile">Profile</a>
+                        <a class="nav-link" href="submit.html">Submit Recipe</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#q1">Quarter Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#next">What's Next</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#rate">Rate Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#references">References</a>
+                        <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
 
-    <header class="portfolio-header text-center py-5 mt-5">
-        <div class="container">
-            <h1 class="display-4"><b>MY ONLINE PORTFOLIO</b></h1>
-            <p class="lead">ICT 9 Project - Fourth Quarter 2024-2025</p>
-        </div>
-    </header>
-
-    <section id="profile" class="section">
-        <div class="container">
-            <h2 class="text-center mb-5"><b>Profile Information</b></h2>
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <img src="https://i.pinimg.com/736x/69/fd/17/69fd174e4c15765a45ca6b24e9e45e1c.jpg" alt="Profile Picture" class="profile-img rounded-circle mb-3">
-                    <h3>Carriena C. Caguiron</h3>
-                    <p>Grade 9 - Sapphire</p>
-                </div>
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">About Me</h4>
-                            <p class="card-text">
-                                This portfolio shows my projects for each quarter of the school year 2024-2025. 
-                                It covers the following programming languages: Basic HTML, Cascading Style Sheet, 
-                                Bootstrap, and JavaScript.
-                            </p>
-                            <h5>Interests/Hobbies:</h5>
-                            <ul>
-                                <li>Drawing</li>
-                                <li>Arts and Crafts</li>
-                                <li>Listening to Music</li>
-                            </ul>
-                            <h5>Ambition:</h5>
-                            <blockquote class="blockquote">
-                                <p>"I am dedicated to live laugh and loving"</p>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<section id="projects" class="section bg-light">
-    <div class="container">
-        <h2 class="text-center mb-5">Quarter Projects</h2>
-        
-        <div class="row">
-            <!-- Quarter 1 -->
-            <div class="col-md-6 mb-4">
-                <h3>Quarter 1</h3>
-                <div class="card project-card h-90">
-                    <img src="https://scontent-mnl1-1.xx.fbcdn.net/v/t39.30808-6/497553647_122228256476064306_6917830280169544408_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=bd9a62&_nc_ohc=11ljALuVAJQQ7kNvwECfcz1&_nc_oc=Adk6FmN0dDBJM5fSkE-xs0za0XHBHuOZ1nVMADqxMadbcRTt9SLSosUE0i6ygYw6KKI&_nc_zt=23&_nc_ht=scontent-mnl1-1.xx&_nc_gid=SoCoOtHp5YUyyWt0rldAKA&oh=00_AfL8uVYx9TrgMQp8mY7a4OslQibOi01i6okhaW_Qj1n1LQ&oe=68299D6C" class="card-img-top" alt="Project 1">
-                    <div class="card-body">
-                        <h5 class="card-title">1st Quarter Project</h5>
-                        <p class="card-text">Introduction to HTML structure and elements.</p>
-                        <a href="#" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 mb-4">
-                <h3>Quarter 2</h3>
-                <div class="card project-card h-90">
-                    <img src="https://scontent-mnl1-1.xx.fbcdn.net/v/t39.30808-6/497446332_122228255294064306_5150498640033304211_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Hwwvwvm1qmMQ7kNvwFnK7uU&_nc_oc=AdknhMlqafbtpZnCl6Ux6Wk5r2MGUE8GMUAVzw_kJIpia1AInPXCIfJySUTIFg5DfUg&_nc_zt=23&_nc_ht=scontent-mnl1-1.xx&_nc_gid=rbH9GCP2h9yQSpC2d25tzA&oh=00_AfJ-X77MB06xJdmh6zF_VqHNut_27YrH6_BeB7tgLjxjog&oe=6829A9AB" class="card-img-top" alt="Project 1">
-                    <div class="card-body">
-                        <h5 class="card-title">2nd Quarter Project</h5>
-                        <p class="card-text">Introduction to HTML structure and elements.</p>
-                        <a href="#" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 mb-4">
-                <h3>Quarter 3</h3>
-                <div class="card project-card h-90">
-                    <img src="https://scontent-mnl1-1.xx.fbcdn.net/v/t39.30808-6/496955147_122228254958064306_4792598911732796632_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=d__b52C0qxUQ7kNvwEaGN8Z&_nc_oc=Adn6aZguQuqwKJWNbQRWGcTyuO_3BZ_GRzZLz00tpysNCgng9gAmKXwFu4G5j3h-SPs&_nc_zt=23&_nc_ht=scontent-mnl1-1.xx&_nc_gid=AFHIv22uh7iekGjamwpriA&oh=00_AfIr-pid7mCZ-V-18VaT4eHyoY7ljY545wZROYaETZqiXw&oe=6829AEC0" class="card-img-top" alt="Project 2">
-                    <div class="card-body">
-                        <h5 class="card-title">3rd Quarter Project</h5>
-                        <p class="card-text">Learning CSS properties and selectors.</p>
-                        <a href="#" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 mb-4">
-                <h3>Quarter 4</h3>
-                <div class="card project-card h-90">
-                    <img src="https://i.pinimg.com/736x/ea/12/e7/ea12e7d7eb8410e2831d1366394011aa.jpg" class="card-img-top" alt="Project 2">
-                    <div class="card-body">
-                        <h5 class="card-title">4th Quiz 2</h5>
-                        <p class="card-text">Learning CSS properties and selectors.</p>
-                        <a href="#" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div>
+        <img src="file:///C:/Users/LEGION/AppData/Local/Temp/Rar$DIa3248.18248/2.png" alt="Philippine Food" class="banner-img">
     </div>
-</section>
 
-    <section id="next" class="section">
-        <div class="container">
-            <h2 class="text-center mb-5">What's Next</h2>
-            <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">My ICT Expectations for Next Year</h4>
-                            <p class="card-text">
-                                Next year in ICT, I hope sir Renn Santos is still my teacher
-                            </p>
-                        </div>
+    <div class="container my-5">
+        <h2 class="text-center mb-4 text-white">Recipe Categories</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="https://scontent-mnl1-1.xx.fbcdn.net/v/t39.30808-6/497133004_122228255378064306_4417438417084806565_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WS9jtKthQJkQ7kNvwEIKfpi&_nc_oc=AdlR6kj4rXP8hyfEUBf4ZBRx5XmHCKi2AdVTofouiqcue0TI83E4_MjlqtSjMnAcg8U&_nc_zt=23&_nc_ht=scontent-mnl1-1.xx&_nc_gid=1U8fh9_AznQGXfNivGy9Tw&oh=00_AfK2aJ8L5gMbMBs8FPFy7_u8DcExmBEHGmbP97ia6zPS_Q&oe=6829A4A3" class="card-img-top" alt="Category 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Breakfast</h5>
+                        <p class="card-text">Delicious breakfast ideas to start your day right.</p>
+                        <a href="Breakfast.html" class="btn btn-primary">View Recipes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="https://scontent-mnl1-1.xx.fbcdn.net/v/t39.30808-6/497795597_122228255834064306_1825821037644070324_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Rc2sDkvlzCgQ7kNvwGFNyV4&_nc_oc=Admf9q0cs0LdPjdjQdsojnwMgJm41PtHOQi2ABWZVxjjvUomq_WdDVeW0vkGn40FjEE&_nc_zt=23&_nc_ht=scontent-mnl1-1.xx&_nc_gid=QhnFQ62OAH0CzxONb4e_oA&oh=00_AfImfEBcAOjGdaT18Np_lHhLhHy7u0aoOedju6aZwsSKPA&oe=6829AAD7" class="card-img-top" alt="Category 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Lunch</h5>
+                        <p class="card-text">Hearty lunch recipes to keep you energized.</p>
+                        <a href="Lunch.html" class="btn btn-primary">View Recipes</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="rate" class="section bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Rate My Portfolio</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <form id="ratingForm">
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Your Name</label>
-                                    <input type="text" class="form-control" id="name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Rating</label>
-                                    <div class="rating-stars mb-3">
-                                        <span class="rating-star" data-value="1">★</span>
-                                        <span class="rating-star" data-value="2">★</span>
-                                        <span class="rating-star" data-value="3">★</span>
-                                        <span class="rating-star" data-value="4">★</span>
-                                        <span class="rating-star" data-value="5">★</span>
-                                    </div>
-                                    <input type="hidden" id="rating" name="rating" value="0">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="comment" class="form-label">Comments</label>
-                                    <textarea class="form-control" id="comment" rows="3"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit Rating</button>
-                            </form>
-                            <div id="ratingResult" class="mt-3"></div>
-                        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <img src="https://scontent-mnl3-1.xx.fbcdn.net/v/t39.30808-6/497510114_122228255492064306_1940466663493416853_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=XUQDUV4OenkQ7kNvwGsTMAZ&_nc_oc=Adm76a_MpQu_0_Og9tROqQS3-BkNg5gQp18xfaQtIPqLXSvNjEHK1KaeN0sHfpQUVDA&_nc_zt=23&_nc_ht=scontent-mnl3-1.xx&_nc_gid=ssgDLUHjZM3UkV72H9oo0Q&oh=00_AfKj92agmCEHkG1IIPCHb_aLR9h4NV9e4IFmipKARIcjgQ&oe=6829AC74" class="card-img-top" alt="Category 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Dinner</h5>
+                        <p class="card-text">Delicious and easy dinner recipes for any night.</p>
+                        <a href="Dinner.html" class="btn btn-primary">View Recipes</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="references" class="section">
-        <div class="container">
-            <h2 class="text-center mb-5">References</h2>
-            <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="https://www.hi.com" target="_blank">hi</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <footer class="text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>OB Montessori Center, Fairview Campus</h5>
-                    <p>ICT 9 - Fourth Quarter Project</p>
-                </div>
-                <div class="col-md-6">
-                    <h5>Submitted by</h5>
-                    <p>Carriena C. Caguiron</p>
-                </div>
-            </div>
-            <p class="mt-3 mb-0">&copy; 2025 All Rights Reserved</p>
-        </div>
+    <footer class="footer">
+        <p>&copy; 2024 HAPAG KAIN-NA! Recipe Hub | All Rights Reserved</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const stars = document.querySelectorAll('.rating-star');
-            const ratingInput = document.getElementById('rating');
-            
-            stars.forEach(star => {
-                star.addEventListener('click', function() {
-                    const value = parseInt(this.getAttribute('data-value'));
-                    ratingInput.value = value;
-                    
-                    stars.forEach((s, index) => {
-                        if (index < value) {
-                            s.style.color = '#ffc107'; // Filled star
-                        } else {
-                            s.style.color = '#e4e5e9'; // Empty star
-                        }
-                    });
-                });
-            });
-            
-            const ratingForm = document.getElementById('ratingForm');
-            const ratingResult = document.getElementById('ratingResult');
-            
-            ratingForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const name = document.getElementById('name').value;
-                const rating = parseInt(ratingInput.value);
-                const comment = document.getElementById('comment').value;
-                
-                if (name.trim() === '') {
-                    alert('Please enter your name');
-                    return;
-                }
-                
-                if (rating === 0) {
-                    alert('Please select a rating');
-                    return;
-                }
-                
-                const averageRating = rating; 
-                
-                // Display result
-                ratingResult.innerHTML = `
-                    <div class="alert alert-success">
-                        <h4>Thank you, ${name}!</h4>
-                        <p>You rated us: ${rating}/5</p>
-                        ${comment ? `<p>Your comment: "${comment}"</p>` : ''}
-                        <p>Average rating: ${averageRating.toFixed(1)}/5</p>
-                    </div>
-                `;
-                
-                ratingForm.reset();
-                stars.forEach(star => {
-                    star.style.color = '#e4e5e9';
-                });
-                ratingInput.value = '0';
-            });
-            
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 70,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
